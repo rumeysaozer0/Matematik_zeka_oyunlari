@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.rumeysaozer.matematikzekaoyunlari.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.rumeysaozer.matematikzekaoyunlari.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_categoryFragment2"
+            app:destination="@id/categoryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment2"
+        android:name="com.rumeysaozer.matematikzekaoyunlari.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment2_to_sorularFragment"
+            app:destination="@id/sorularFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/sorularFragment"
+        android:name="com.rumeysaozer.matematikzekaoyunlari.SorularFragment"
+        android:label="fragment_sorular"
+        tools:layout="@layout/fragment_sorular" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="mid"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_sorularFragment_to_lastFragment"
+            app:destination="@id/lastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastFragment"
+        android:name="com.rumeysaozer.matematikzekaoyunlari.LastFragment"
+        android:label="fragment_last"
+        tools:layout="@layout/fragment_last" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="correct"
+            app:argType="integer" />
+        <argument
+            android:name="question"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_lastFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>

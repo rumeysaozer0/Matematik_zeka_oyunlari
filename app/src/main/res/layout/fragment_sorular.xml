@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".SorularFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text="Aşağıdaki İşlemin Sonucu Kaçtır?"
+            android:textColor="#363A43"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:text="10 + 5 = "
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="0"
+                android:minHeight="50dp"
+                android:max="10"
+                android:indeterminate="false"
+                style="?android:attr/progressBarStyleHorizontal"
+                />
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#363A43"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:text="1/10"
+                android:textColorHint="#7A8089"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_border"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="1"
+            android:textColor="#0E1E40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_border"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="2"
+            android:textColor="#0E1E40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_border"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="3"
+            android:textColor="#0E1E40"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_border"
+            android:fontFamily="@font/audiowide"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="4"
+            android:textColor="#0E1E40"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sentQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_round"
+            android:fontFamily="@font/audiowide"
+            android:text="SENT"
+            android:textSize="18sp"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+</ScrollView>
